@@ -14,6 +14,8 @@
 		4048817922AC15E900228841 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4048817722AC15E900228841 /* LaunchScreen.storyboard */; };
 		4048818422AC15E900228841 /* InventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048818322AC15E900228841 /* InventoryTests.swift */; };
 		4048818F22AC15E900228841 /* InventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048818E22AC15E900228841 /* InventoryUITests.swift */; };
+		4048819D22AC166900228841 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = 4048819C22AC166900228841 /* Jenkinsfile */; };
+		4048819F22AC167500228841 /* InventoryUITestsCS3260.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4048819E22AC167500228841 /* InventoryUITestsCS3260.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4048818A22AC15E900228841 /* InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4048818E22AC15E900228841 /* InventoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryUITests.swift; sourceTree = "<group>"; };
 		4048819022AC15E900228841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4048819C22AC166900228841 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
+		4048819E22AC167500228841 /* InventoryUITestsCS3260.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryUITestsCS3260.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		4048816222AC15E800228841 = {
 			isa = PBXGroup;
 			children = (
+				4048819C22AC166900228841 /* Jenkinsfile */,
 				4048816D22AC15E800228841 /* Inventory */,
 				4048818222AC15E900228841 /* InventoryTests */,
 				4048818D22AC15E900228841 /* InventoryUITests */,
@@ -119,6 +124,7 @@
 		4048818D22AC15E900228841 /* InventoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				4048819E22AC167500228841 /* InventoryUITestsCS3260.swift */,
 				4048818E22AC15E900228841 /* InventoryUITests.swift */,
 				4048819022AC15E900228841 /* Info.plist */,
 			);
@@ -230,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4048817922AC15E900228841 /* LaunchScreen.storyboard in Resources */,
+				4048819D22AC166900228841 /* Jenkinsfile in Resources */,
 				4048817622AC15E900228841 /* Assets.xcassets in Resources */,
 				4048817422AC15E800228841 /* Main.storyboard in Resources */,
 			);
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4048818F22AC15E900228841 /* InventoryUITests.swift in Sources */,
+				4048819F22AC167500228841 /* InventoryUITestsCS3260.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -440,7 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.Inventory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.Inventory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -476,7 +484,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.InventoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inventory.app/Inventory";
 			};
@@ -496,7 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.InventoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inventory.app/Inventory";
 			};
@@ -515,7 +523,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.InventoryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Inventory;
 			};
@@ -534,7 +542,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylemcarthur.InventoryUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Inventory;
 			};
