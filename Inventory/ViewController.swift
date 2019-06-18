@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) ->
         UISwipeActionsConfiguration? {
         let destroyAction = UIContextualAction(style: .destructive, title: "Delete") { (action:UIContextualAction, sourceView:UIView, actionPerformed:(Bool)-> Void) in
-//            self.items.remove(at: indexPath.row)
+            self.items.remove(at: indexPath.row)
             tableView.reloadData()
             actionPerformed(true)
         }
