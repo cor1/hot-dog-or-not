@@ -9,12 +9,13 @@
 import UIKit
 
 class EditViewController: UIViewController {
-    var passedItem = Item(shortDescription: "", longDescription: "")
+    var passedItem: Item!
     var passedIndex = 0
     @IBOutlet weak var shortDescription: UITextField!
-    @IBOutlet weak var longDescription: UITextView!
+    @IBOutlet weak var imageCont: UIImageView!
+    @IBOutlet weak var heading: UILabel!
     weak var delegate: DataEnteredDelegate? = nil
-
+    var labelArr = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Edit Item"
@@ -24,26 +25,27 @@ class EditViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = save
         // Do any additional setup after loading the view.
         shortDescription?.text = passedItem.shortDescription
-        longDescription?.text = passedItem.longDescription
+        imageCont?.image = passedItem.image
+        labelArr = passedItem.tags
+        //show label if its a hot dog, they are allowed to edit only the title
+        if (self.labelArr.contains("Hot dog")) {
+            self.heading.text = "HOT DOG!"
+            self.heading.textColor = UIColor.green
+        } else {
+            self.heading.text = "NOT HOT DOG!"
+            self.heading.textColor = UIColor.red
+        }
     }
     
     @objc func saveItem() {
-        if (shortDescription.text ?? "").isEmpty && (longDescription.text ?? "").isEmpty {
+        //save items back to main view
+        if (shortDescription.text ?? "").isEmpty {
             self.navigationController?.popViewController(animated: true)
             return
         }
-        let newObj = Item(shortDescription: shortDescription.text!, longDescription: longDescription.text!)
+        let newObj = Item(shortDescription: shortDescription.text!, tags: labelArr, image: imageCont.image!, index: passedIndex)
         delegate?.userDidEditInformation(passedObj: newObj, index: passedIndex)
         self.navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

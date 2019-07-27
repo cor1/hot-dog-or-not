@@ -1,15 +1,15 @@
 //
-//  InventoryTests.swift
-//  InventoryTests
+//  FinalTests.swift
+//  FinalTests
 //
 //  Created by Kyle McArthur on 6/8/19.
 //  Copyright © 2019 Kyle McArthur. All rights reserved.
 //
 
 import XCTest
-@testable import Inventory
+@testable import Final
 
-class InventoryTests: XCTestCase {
+class FinalTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

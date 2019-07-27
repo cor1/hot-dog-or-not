@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inventory-->
+        <!--Final-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Inventory" id="BYZ-38-t0r" customClass="ViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Final" id="BYZ-38-t0r" customClass="ViewController" customModule="Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OCk-Oh-VEj">
-                        <barButtonItem key="backBarButtonItem" title="Inventory" id="7e8-ph-4Gx"/>
+                        <barButtonItem key="backBarButtonItem" title="Final" id="7e8-ph-4Gx"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="QuA-1E-Avg">
                             <connections>
                                 <segue destination="Afv-xL-HkN" kind="show" identifier="addSegue" id="HyK-Me-07p"/>
@@ -82,13 +82,13 @@
         <!--Edit View Controller-->
         <scene sceneID="jYs-YH-uZ2">
             <objects>
-                <viewController id="Dvg-bo-yc6" userLabel="Edit View Controller" customClass="EditViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dvg-bo-yc6" userLabel="Edit View Controller" customClass="EditViewController" customModule="Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sij-8x-uRE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hz0-wo-yjF">
-                                <rect key="frame" x="16" y="104" width="382" height="166"/>
+                                <rect key="frame" x="16" y="104" width="382" height="394"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqy-7B-Hat">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -97,16 +97,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uld-qa-exs">
-                                        <rect key="frame" x="0.0" y="46" width="382" height="120"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6Y-go-lTc">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-3i-VPu">
+                                        <rect key="frame" x="0.0" y="112" width="382" height="282"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="editLongDescription"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="6Wl-i2-NrO"/>
+                                            <constraint firstAttribute="width" constant="382" id="7cW-EW-6to"/>
+                                            <constraint firstAttribute="height" constant="282" id="dn0-Hf-LuY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -119,7 +123,8 @@
                         <viewLayoutGuide key="safeArea" id="OaM-16-arb"/>
                     </view>
                     <connections>
-                        <outlet property="longDescription" destination="uld-qa-exs" id="5K5-NE-iUQ"/>
+                        <outlet property="heading" destination="M6Y-go-lTc" id="obv-hu-MxS"/>
+                        <outlet property="imageCont" destination="CQ6-3i-VPu" id="GeK-Lb-0br"/>
                         <outlet property="shortDescription" destination="Qqy-7B-Hat" id="Alo-xH-cfm"/>
                     </connections>
                 </viewController>
@@ -130,13 +135,13 @@
         <!--Add View Controller-->
         <scene sceneID="qlO-JX-Hd3">
             <objects>
-                <viewController id="Afv-xL-HkN" userLabel="Add View Controller" customClass="AddViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Afv-xL-HkN" userLabel="Add View Controller" customClass="AddViewController" customModule="Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mt4-MC-Fme">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YEC-Sj-jXP">
-                                <rect key="frame" x="16" y="104" width="382" height="166"/>
+                                <rect key="frame" x="16" y="104" width="382" height="440"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FC3-MS-hnt">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -145,16 +150,27 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-67-VpS">
-                                        <rect key="frame" x="0.0" y="46" width="382" height="120"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvH-EB-4ss">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="30"/>
+                                        <state key="normal" title="Add Image"/>
+                                        <connections>
+                                            <action selector="addImage:" destination="Afv-xL-HkN" eventType="touchUpInside" id="fhP-rs-CqD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cai-nw-rJo">
+                                        <rect key="frame" x="0.0" y="92" width="382" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JWW-Il-hVr">
+                                        <rect key="frame" x="0.0" y="158" width="382" height="282"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="addLongDescription"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="M3G-JG-3hg"/>
+                                            <constraint firstAttribute="height" constant="282" id="0g1-yY-lpv"/>
+                                            <constraint firstAttribute="width" constant="382" id="bT7-tG-3vA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -167,7 +183,8 @@
                         <viewLayoutGuide key="safeArea" id="PZa-Aa-Qav"/>
                     </view>
                     <connections>
-                        <outlet property="longDescription" destination="h3M-67-VpS" id="bqE-GQ-Dzq"/>
+                        <outlet property="heading" destination="cai-nw-rJo" id="wEq-yv-Lf0"/>
+                        <outlet property="imageCont" destination="JWW-Il-hVr" id="5Nc-i9-Jwo"/>
                         <outlet property="shortDescription" destination="FC3-MS-hnt" id="i5e-R0-OA8"/>
                     </connections>
                 </viewController>
